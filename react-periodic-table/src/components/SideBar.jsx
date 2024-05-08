@@ -108,35 +108,12 @@ function SideBar(props) {
                         strokeWidth={largeBoxMargin}
                     />
                     <Text
-                        x={leftTextMargin}
-                        y={vertTextMargin + xMultiplier / 1.35}
+                        x={sideX + largeBoxMargin + xMultiplier * 2 - 50}
+                        y={vertTextMargin + xMultiplier * 1.1}
                         text={allElements[currEleIndex].symbol}
                         fontStyle="bold"
                         fontSize={72}
-                    />
-                    <Text
-                        x={leftTextMargin}
-                        y={vertTextMargin}
-                        text={allElements[currEleIndex].number}
-                        fontStyle="bold"
-                        fontSize={40}
-                    />
-                    <Text
-                        x={leftTextMargin}
-                        y={vertTextMargin + xMultiplier * 2}
-                        text={allElements[currEleIndex].name}
-                        fontSize={40}
-                        fontFamily={
-                            allElements[currEleIndex].name.length < 9
-                                ? "Arial"
-                                : "Arial Narrow"
-                        }
-                    />
-                    <Text
-                        x={leftTextMargin}
-                        y={vertTextMargin + xMultiplier * 2.75}
-                        text={allElements[currEleIndex].mass}
-                        fontSize={40}
+                        width={100}
                     />
                     <Group x={sideX} y={sideY + yMultiplier * 4.25}>
                         {Object.entries(sideBarObj).map(([key, val], index) => {
